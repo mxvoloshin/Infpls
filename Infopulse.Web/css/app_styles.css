@@ -1,0 +1,24 @@
+﻿
+.content {
+    margin: 0 auto;
+    width:60%
+}
+
+nav {
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.btn-register {
+    float: right;
+    
+}
+.search {
+    margin-bottom: 5px;
+}
+
+.actions {
+    float: right;
+    text-decoration: none;
+    margin-bottom: 5px;
+}

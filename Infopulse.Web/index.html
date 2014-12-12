@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="main">
+<head>
+    <title></title>
+    <script src="libs/js/angular.js"></script>
+    <script src="libs/js/angular_resource.js"></script>
+    <script src="libs/js/angular_route.js"></script>
+    <script src="libs/js/jquery-1.11.1.js"></script>
+    <script src="libs/js/ng-table.js"></script>
+    <script src="libs/js/ui-bootstrap-tpls-0.11.2.js"></script>
+    <script src="libs/js/bootstrap.js"></script>
+    <script src="libs/js/underscore.js"></script>
+   
+    <script src="scripts/app.js"></script>
+    <script src="scripts/factories/customers.js"></script>
+    <script src="scripts/controllers/registration.js"></script>
+    <script src="scripts/controllers/customerlist.js"></script>
+   
+    
+
+    <link href="libs/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="libs/css/bootstrap.css" rel="stylesheet" />
+    <link href="libs/css/ng-table.css" rel="stylesheet" />
+    <link href="css/app_styles.css" rel="stylesheet" />
+ 
+</head>
+
+    <body class="content" >
+        <nav>
+            <ul class="nav nav-tabs">
+                <li ><a href="#/registration">Registration</a></li>
+                <li ><a href="#/customerlist" >Customer List</a></li>
+            </ul>
+        </nav>
+       
+        <div ng-view>
+           </div>
+       
+    </body>
+</html>

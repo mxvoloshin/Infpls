@@ -1,0 +1,22 @@
+﻿<div class="alert alert-warning" ng-if="error" role="alert">{{error}}</div>
+<div class="alert alert-success" ng-if="message" role="alert">{{message}}</div>
+<div class="row">
+    <div class="col-xs-8">
+        <input type="text" ng-model="searchstring" class="search form-control" placeholder="Search" />
+    </div>
+    <div class="col-xs-4">
+        <div class="btn-group actions" role="group">
+            <a href="#/registration" class="btn btn-default">Add</a>
+            <button type="button" class="btn btn-default" ng-click="deleteCustomer()">Delete</button>
+        </div>
+    </div>
+</div>
+<table ng-table="tableParams" show-filter="true" class="table  table-bordered table-hover">
+    <tr ng-repeat="customer in $data|filter: searchstring" ng-click="customer.$selected = !customer.$selected" ng-class="{'active': customer.$selected}">
+        <td data-title="'#'">{{$index + 1}}</td>
+        <td data-title="'Name'" sortable="'Name'">{{customer.Name}}</td>
+        <td data-title="'Address'" sortable="'Address'">{{customer.Address}}</td>
+        <td data-title="'Description'" sortable="'Phone'">{{customer.Description}}</td>
+        <td data-title="'Last Order Date'" sortable="'LastOrderDate'">{{customer.LastOrderDate}}</td>
+    </tr>
+</table>
